@@ -1,0 +1,212 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(153, 153, 102);
+}
+
+#page{
+    margin: auto;
+    width: 500px;
+}
+
+/* menu */
+#menu{
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    background-color: rgb(245, 245, 239);
+    border: 7px rgb(70, 70, 70) solid;
+    border-radius: 12px;
+}
+#menu h1{
+    padding: 10px;
+    margin: 0;
+}
+#screen{
+    width: 55px;
+    height: 35px;
+    background-color: rgb(70, 70, 70);
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+}
+#screen div{
+    margin: 0;
+    padding: 0;
+    color: yellow;
+    vertical-align: middle;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Orbitron";
+    font-size: 20px;
+}
+#options{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-row: auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-collapse: collapse;
+}
+#options .o{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+#options .o:hover{
+    cursor: pointer;
+}
+#options .o:hover .b{
+    background-color: blue;
+}  
+#options .b{
+    background-color: aquamarine;
+    border: 3px solid black;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#options div .blue{
+    background-color: blue;
+}
+#options p{
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* game */
+
+#game{
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-row: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    border-collapse: collapse;
+}
+
+#game .game-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 150px;
+    border: none;
+    border-radius: 20px;
+    border: 4px rgb(70, 70, 70) solid;
+}
+#game .game-button:hover{
+    cursor: default;
+}
+
+#game .game-button.player-click:hover{
+    cursor: pointer;
+}
+
+.green{
+    background-color: rgb(41, 163, 41);
+}
+.green-light{
+    background-color: rgb(51, 204, 51);
+}
+
+.blue{
+    background-color: rgb(0, 0, 255);
+}
+.blue-light{
+    background-color: rgb(77, 77, 255);
+}
+
+.yellow{
+    background-color: rgb(255, 255, 51);
+}
+.yellow-light{
+    background-color: rgb(255, 255, 153);
+}
+
+.red{
+    background-color: rgb(255, 0, 0);
+}
+.red-light{
+    background-color: rgb(255, 77, 77);
+}
+
+.grey{
+    background-color: rgb(120, 120, 120);
+}
+.grey-light{
+    background-color: rgb(210, 210, 210);
+}
+
+/* Victory */
+#victory-box{
+    position: relative;
+}
+#victory{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    vertical-align: middle;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: cornflowerblue;
+    font-size: 40px;
+}
+
+.vic{
+    animation-name: vic;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes vic{
+    0%{
+        font-size: 40px;
+    }
+    50%{
+        font-size: 130px;
+    }
+    100%{
+        font-size: 40px;
+    }
+}
+
+.green.button-victory, .yellow.button-victory{
+    animation-name: b-vic;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes b-vic{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg)
+    }
+}
+
+.red.button-victory, .blue.button-victory{
+    animation-name: b-vic2;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes b-vic2{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}
